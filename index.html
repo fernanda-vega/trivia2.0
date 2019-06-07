@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia 2.0</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+	<!-- Main screen-->
+	<div id="pagina1">
+		<h1 class="caja">Bienvenido</h1>
+		<div id="play" class="play">
+			<label class="subtitle">¿Listo para jugar?</label>
+		</div>
+    
+		<div id="one">
+			<input type="text" placeholder="ingresa tu nombre" id="username">
+		</div>
+		<div id="two">
+			<button class="boton" onclick="getName()">¡Vamos!</button>
+		</div>
+	</div>
+
+	<!--categorias-->
+	<section id=pagina2>
+		<div>
+			<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+		</div>
+			<h1>Bienvenida <span id="nombre-usuario"></span></h1>
+			<p>¿Estás listo para comenzar a jugar?</p>
+			<p>Elige una de las siguientes categorías</p>
+			<div id='opciones'>
+				<button id="opcion1" class="btn" onclick="functionA()">Colores</button> 
+				<button id="opcion2" class="btn" onclick="functionB()">Números</button> 
+			</div>
+	</section>
+	<!--Preguntas Colores-->
+<section id="cielo">
+		<div>
+				<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+		</div>
+	
+	<div>
+		<div id="question1" class="question">
+			<h1> ¿De qué color es el cielo? </h1>
+		</div>
+
+		<div id="answers1" class="answers">
+				<input type="radio" name="pregunta1" value="opcionA" id="firstA" required> celeste
+				<input type="radio" name="pregunta1" value="opcionB" id="firstB"> café
+				<input type="radio" name="pregunta1" value="opcionC" id="firstC"> rosado
+		</div>
+
+		<br/>
+		<div id="siguiente1">
+			<button id="btn1" class="btn" onclick="Q1()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+<section id=sol>
+		<div>
+				<div>
+				<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+				</div>
+
+		<div id="question2" class="question">
+			<h1> ¿De qué color es el sol?</h1>
+		</div>
+		<div id="answers2" class="answers">
+				<input type="radio" name="pregunta2" value="opcionA" id="secondA" required>verde
+				<input type="radio" name="pregunta2" value="opcionB" id="secondB"> amarillo
+				<input type="radio" name="pregunta2" value="opcionC" id="secondC"> negro
+		</div>
+		<br>
+		<div id="siguiente2">
+			<button id="btn2" class="btn" onclick="Q2()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+	
+<section id="madera">
+<div>
+		<div>
+				<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+		</div>
+
+		<div id="question3" class="question">
+			<h1> ¿De qué color es la madera?</h1>
+		</div>
+		<div id="answers3" class="answers">
+				<input type="radio" name="pregunta3" value="opcionA" id="thirdA" required> cafe
+				<input type="radio" name="pregunta3" value="opcionB" id="thirdB"> morado
+				<input type="radio" name="pregunta3" value="opcionC" id="thirdC"> rojo
+		</div>
+		<br>
+		<div id="siguiente3">
+			<button id="btn3" class="btn" onclick="Q3()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+	<!-- Preguntas números -->
+<section id='pares'>	
+	<div>
+			<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+	</div>
+
+<div>
+		<div id="question4" class="question">
+			<h1> ¿Cuales son los números pares del 1 al 10? </h1>
+		</div>
+		<div id="answers4" class="answers">
+				<input type="radio" name="pregunta1" value="opcionA" id="primerA" required> 1-8-9-10.
+				<input type="radio" name="pregunta1" value="opcionB" id="primerB"> 3-5-7-9.
+				<input type="radio" name="pregunta1" value="opcionC" id="primerC"> 2-4-6-8-10.
+		</div>
+		<br>
+		<div id="siguiente4">
+			<button id="btn4" class="btn" onclick="QC1()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+
+<section id='primos'>
+		<div>
+				<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+		</div>
+	
+	<div>
+		<div id="question2" class="question">
+			<h1> ¿Cuales son los numeros primos del 1 al 10? </h>
+		</div>
+		<div id="answers5" class="answers">
+				<input type="radio" name="pregunta2" value="opcionA" id="segundaA" required> 1-3-5-7.
+				<input type="radio" name="pregunta2" value="opcionB" id="segundaB"> 2-3-7-9
+				<input type="radio" name="pregunta2" value="opcionC" id="segundaC"> 2-3-5-7
+		</div>
+		<br>
+		<div id="siguiente5">
+			<button id="btn5" class="btn" onclick="QC2()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+<section id='impares'>
+		<div>
+				<button type="button" name="button" onclick="location.reload()">Volver al inicio</button>
+				</div>
+
+	<div>
+		<div id="question3" class="question">
+			<h1> ¿Cuales son los números impares del 1 al l0? </h>
+		</div>
+		<div id="answers6" class="answers">
+				<input type="radio" name="pregunta3" value="opcionA" id="tercerA" required> 1-3-5-7-9
+				<input type="radio" name="pregunta3" value="opcionB" id="tercerB"> 2-3-5-7
+				<input type="radio" name="pregunta3" value="opcionC" id="tercerC"> 2-4-6-8-10
+		</div>
+		<br>
+		<div id="siguiente6">
+			<button id="btn6" class="btn" onclick="QC3()">Siguiente</button>
+		</div>
+	</div>
+</section>
+
+	<!-- Pantalla de resultado final de la trivia #1 -->
+<section id='final'>
+	<div>
+		<h1 id="resultado" class="caja"></h1>
+		<p> ¿Jugar de nuevo? </p>
+    <div id="opciones">
+      <button id="opcion1" class="btn" onclick="backCategories()">Elegir categoría</button>
+      <button id="opcion2" class="btn" onclick="location.reload()">Volver al inicio</button>
+    </div>
+	</div>
+</section>		
+
+</body>
+  
+	
+<script  src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
